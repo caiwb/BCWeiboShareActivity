@@ -12,6 +12,7 @@
 #define WB_ACCESS_TOKEN     @"WB_ACCESS_TOKEN"
 #define WB_REFRESH_TOKEN    @"WB_REFRESH_TOKEN"
 #define WB_EXPIRATION_DATE  @"WB_EXPIRATION_DATE"
+#define WB_USERID           @"WB_USERID"
 
 #define weaklyBCWBHandler() __weak BCWBSocialHandler *weakHandler = [BCWBSocialHandler sharedInstance]
 
@@ -26,6 +27,8 @@
 @property (nonatomic, strong) NSString *refreshToken;
 
 @property (nonatomic, strong) NSDate *expirationDate;
+
+@property (nonatomic, strong) NSString *userID;
 
 @property (nonatomic, strong) NSArray *errList;
 

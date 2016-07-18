@@ -8,6 +8,7 @@
 
 #import "BCWBLoginProvider.h"
 #import "BCWBSocialHandler.h"
+#import "WBHttpRequest.h"
 
 @implementation BCWBLoginProvider
 
@@ -37,6 +38,27 @@
     request.redirectURI = [BCWBSocialHandler sharedInstance].redirectURI;
     request.scope = @"all";
     [WeiboSDK sendRequest:request];
+}
+
++ (void)getUserInfoWithCompleteBlock:(void (^)(BOOL, WeiboUser *))complete
+{
+    NSParameterAssert(complete);
+    
+    [WBHttpRequest requestForUserProfile:[BCWBSocialHandler sharedInstance].userID
+                         withAccessToken:[BCWBSocialHandler sharedInstance].accessToken
+                      andOtherProperties:nil
+                                   queue:nil
+                   withCompletionHandler:^(WBHttpRequest *httpRequest, WeiboUser *result, NSError *error) {
+
+            if (error)
+            {
+                complete(NO, nil);
+            }
+            else
+            {
+                complete(YES, result);
+            }
+    }];
 }
 
 @end

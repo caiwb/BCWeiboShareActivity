@@ -57,6 +57,7 @@
     self.accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:WB_ACCESS_TOKEN];
     self.refreshToken = [[NSUserDefaults standardUserDefaults] objectForKey:WB_REFRESH_TOKEN];
     self.expirationDate = [[NSUserDefaults standardUserDefaults] objectForKey:WB_EXPIRATION_DATE];
+    self.userID = [[NSUserDefaults standardUserDefaults] objectForKey:WB_USERID];
     
     return YES;
 }
@@ -97,10 +98,12 @@
                 self.accessToken = aResp.accessToken;
                 self.refreshToken = aResp.refreshToken;
                 self.expirationDate = aResp.expirationDate;
+                self.userID = aResp.userID;
                 
                 [[NSUserDefaults standardUserDefaults] setObject:self.accessToken forKey:WB_ACCESS_TOKEN];
                 [[NSUserDefaults standardUserDefaults] setObject:self.refreshToken forKey:WB_REFRESH_TOKEN];
                 [[NSUserDefaults standardUserDefaults] setObject:self.expirationDate forKey:WB_EXPIRATION_DATE];
+                [[NSUserDefaults standardUserDefaults] setObject:self.userID forKey:WB_USERID];
             }
         }
         else
@@ -117,10 +120,12 @@
             self.accessToken = aResp.accessToken;
             self.refreshToken = aResp.refreshToken;
             self.expirationDate = aResp.expirationDate;
+            self.userID = aResp.userID;
             
             [[NSUserDefaults standardUserDefaults] setObject:self.accessToken forKey:WB_ACCESS_TOKEN];
             [[NSUserDefaults standardUserDefaults] setObject:self.refreshToken forKey:WB_REFRESH_TOKEN];
             [[NSUserDefaults standardUserDefaults] setObject:self.expirationDate forKey:WB_EXPIRATION_DATE];
+            [[NSUserDefaults standardUserDefaults] setObject:self.userID forKey:WB_USERID];
             
             self.loginComplete(YES, self.accessToken, nil, nil);
         }
