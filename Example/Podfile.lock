@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BCWeiboShareActivity: 1712013950bde582ab7db8fcdaa901057d5aae40
+  BCWeiboShareActivity: 6e0fdfc857a5c4d4432d89865030d19a09a70ef9
 
 COCOAPODS: 0.39.0
