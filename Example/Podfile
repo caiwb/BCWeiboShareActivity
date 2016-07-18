@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'BCWeiboShareActivity_Example' do
+  pod 'BCWeiboShareActivity', :path => '../'
+
+end

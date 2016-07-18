@@ -1,0 +1,14 @@
+PODS:
+  - BCWeiboShareActivity (0.1.0)
+
+DEPENDENCIES:
+  - BCWeiboShareActivity (from `../`)
+
+EXTERNAL SOURCES:
+  BCWeiboShareActivity:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BCWeiboShareActivity: 1712013950bde582ab7db8fcdaa901057d5aae40
+
+COCOAPODS: 0.39.0
