@@ -13,7 +13,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions NS_AVAILABLE_IOS(3_0)
 {
-    return [[BCWBSocialHandler sharedInstance] setWBAppKey:@"appKey" redirectURI:@"redirectURI"];
+    [[BCWBSocialHandler sharedInstance] setWBAppKey:@"appKey" redirectURI:@"redirectURI"];
+    
+    return YES;
 }
 
 
